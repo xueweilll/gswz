@@ -1,0 +1,142 @@
+
+.news-banner {
+    margin: 0 auto;
+    width: 1920px;
+}
+.news-center {
+    margin: 20px auto 0;
+    width: 1200px;
+}
+.news-center .news-leftimg {
+    display: block;
+    position: relative;
+    width: 205px;
+}
+.news-center .news-leftimg .gsxw {
+    border-bottom: 1px solid #ddd;
+    display: inline-block;
+    left: 20px;
+    line-height: 50px;
+    position: absolute;
+    top: 150px;
+    width: 182px;
+}
+.news-center .news-leftimg .gsxw:hover {
+    color: #e71f1a;
+    cursor: pointer;
+}
+.news-center .news-leftimg .hyzx {
+    border-bottom: 1px solid #ddd;
+    display: inline-block;
+    left: 20px;
+    line-height: 50px;
+    position: absolute;
+    top: 219px;
+    width: 182px;
+}
+.news-center .news-leftimg .hyzx:hover {
+    color: #e71f1a;
+    cursor: pointer;
+}
+.news-left {
+    float: left;
+    width: 200px;
+}
+.news-banner {
+    margin: 0 auto;
+    width: 100%;
+}
+.news-banner img {
+    width: 100%;
+}
+.news-right {
+    background-color: #f9f9f9;
+    height: auto;
+    margin-left: 202px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 20px;
+}
+.news-rightlist {
+    height: auto;
+    min-height: 500px;
+}
+.news-left-title {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    height: 22px;
+    padding-bottom: 10px;
+    padding-left: 45px;
+    padding-top: 30px;
+    width: 955px;
+}
+.current-position {
+    color: #666;
+    display: block;
+    font-size: 14px;
+    line-height: 36px;
+    margin-top: -30px;
+    padding-left: 20px;
+}
+.news-right-list {
+    float: right;
+    line-height: 20px;
+    margin-top: 20px;
+    width: 950px;
+}
+.news-right-list ul li {
+    list-style-type: none;
+}
+.news-right-list ul li span {
+    border-bottom: 1px dotted #ddd;
+    display: block;
+    float: left;
+    line-height: 40px;
+    width: 900px;
+}
+.news-right-list span i {
+    display: inline-block;
+    overflow: hidden;
+    padding-left: 20px;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 400px;
+}
+.news-right-list span i:hover {
+    color: #f00;
+    cursor: pointer;
+}
+.fanye {
+    clear: both;
+    font-size: 14px;
+    margin: 20px auto 0;
+    text-align: right;
+    width: 1200px;
+}
+.fanye a {
+    display: block;
+    line-height: 40px;
+}
+.fanye a span {
+    display: inline-block;
+    height: 0;
+    padding: 1px 10px;
+}
+.fanye a .yeshu {
+    border: 1px solid #999;
+    font-size: 12px;
+    height: 13px;
+    line-height: 13px;
+    margin-left: -6px;
+    margin-right: 5px;
+    margin-top: -16px;
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+    width: 20px;
+}
+.fanye a .fanye-but:hover {
+    color: #f00;
+    cursor: pointer;
+}

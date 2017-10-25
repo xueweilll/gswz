@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+.company-ser{
+	width:1000px;
+	height:400px;
+	text-align:center;
+	margin-top:40px;
+	}
+.news-right-list ul li{
+	list-style-type:none;
+	float:left;
+	padding-right:10px;
+	margin-bottom:40px;
+	}
+.news-right-list ul li a{
+	display:block;
+	}
+.news-right-list ul li i{
+	font-size:14px;
+	color:#333;
+	}
+.news-right-list ul li i:hover{
+	color:#e71f1a;
+	cursor:pointer;
+	}

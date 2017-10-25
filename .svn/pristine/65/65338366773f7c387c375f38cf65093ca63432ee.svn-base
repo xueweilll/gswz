@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"
+	contentType="text/html; charset=utf-8"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<base href="<%=basePath%>">
+<title>江苏明鹿物联技术股份有限公司</title>
+
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="This is my page">
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+	<header>
+	<div class="container">
+		<div class="nav-brand">
+			<img src="img/logo.png" />
+		</div>
+		<div class="nav-list">
+			<ul>
+				<li><a href="index.html">公司首页</a></li>
+				<li><a href="news.html">公司新闻</a></li>
+				<li><a href="solution.html">解决方案</a></li>
+				<li><a href="product.html">产品中心</a></li>
+				<li><a href="cooperator.html">合作伙伴</a></li>
+				<li><a href="home.html">关于我们</a></li>
+			</ul>
+		</div>
+	</div>
+	</header>
+	<div class="banner">
+		<img src="img/banner.jpg" />
+	</div>
+	<div class="news">
+		<p>新闻动态</p>
+		<ul class="news-title">
+			<li><a href="#">公司新闻</a></li>
+			<li><a href="#">行业动态</a></li>
+		</ul>
+		<div class="news-upde"></div>
+		<div class="news-carousel">
+			<ul>
+				<li><a href="#" class="more">更多></a> <a class="carousel-img"><img
+						src=${news-img1 } /> <span>${news1 }</span> </a></li>
+				<li><a href="#" class="more">更多></a> <a class="carousel-img"><img
+						src=${news-img1 } /> <span>${news2 }</span> </a></li>
+				<li><a href="#" class="more">更多></a> <a class="carousel-img"><img
+						src=${news-img1 } /> <span>${news3 }</span> </a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="wwa">
+		<p>我们是谁</p>
+		<a class="wwa-title">一站式校企合作解决方案提供商</a> <span class="wwa-line"><img
+			src="img/line.png" /></span>
+		<div class="wwa-content">
+			<a class="wwa-content-left"> <img src="img/cop-img.png" />
+			</a> <a class="wwa-content-right"> <span>江苏微软技术中心
+					是按照"江苏省人民政府与微软（中国）有限公司合作备忘录"的有关精神成立的机构。中心的具体运作平台是江苏苏微软件技术有限公司。</span>
+			</a>
+			<div class="wwa-right-list">
+				<ul>
+					<li><a><img src="img/w-img.png" /></a><span>南京市软件服务外包人才培训基地</span></li>
+					<li><a><img src="img/w-img.png" /></a><span>南京市软件服务外包人才培训基地</span></li>
+					<li><a><img src="img/w-img.png" /></a><span>南京市软件服务外包人才培训基地</span></li>
+					<li><a><img src="img/w-img.png" /></a><span>南京市软件服务外包人才培训基地</span></li>
+					<li><a><img src="img/w-img.png" /></a><span>南京市软件服务外包人才培训基地</span></li>
+					<li><a><img src="img/w-img.png" /></a><span>南京市软件服务外包人才培训基地</span></li>
+					<li><a><img src="img/w-img.png" /></a><span>南京市软件服务外包人才培训基地</span></li>
+					<li><a><img src="img/w-img.png" /></a><span>南京市软件服务外包人才培训基地</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="zizhi">
+		<p>我们具备</p>
+		<a class="zihi-title">一站式校企合作解决方案提供商</a> <span class="zizhi-line"><img
+			src="img/zizhi-line.png" /></span>
+		<div class="zizhi-content">
+			<ul>
+				<li><a><img src="img/yanfa.png" /></a></li>
+				<li><a style="margin-left: 305px;"><img src="img/yanfa.png" /></a></li>
+				<li><a style="margin-left: 486px;"><img src="img/yanfa.png" /></a></li>
+				<li><a style="margin-left: 667px;"><img src="img/yanfa.png" /></a></li>
+				<li><a style="margin-left: 849px;"><img src="img/yanfa.png" /></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="service">
+		<p>我们的服务</p>
+		<a class="service-title">一站式校企合作解决方案提供商</a>
+		<ul class="service-list">
+			<li><a href="#">解决方案</a></li>
+			<li><a href="#">培训服务</a></li>
+			<li><a href="#">认证服务</a></li>
+		</ul>
+		<div class="service-img">
+			<ul>
+				<li><a><img src="img/service-img.png" /></a></li>
+				<li><a><img src="img/service-img.png" /></a></li>
+				<li><a><img src="img/service-img.png" /></a></li>
+				<li><a><img src="img/service-img.png" /></a></li>
+				<li><a><img src="img/service-img.png" /></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="product">
+		<p>我们的产品</p>
+		<a class="product-title">一站式校企合作解决方案提供商</a> <span class="product-line"><img
+			src="img/line.png" /></span>
+		<div class="product-content">
+			<div class="product-content-img">
+				<a><img src="img/pro-img1.jpg" /></a> <a
+					style="margin-left: 420px;"><img src="img/pro-img2.jpg" /></a> <a
+					style="margin-left: 778px;"><img src="img/pro-img3.jpg" /></a>
+			</div>
+		</div>
+	</div>
+	<div class="customer">
+		<p>我们的客户</p>
+		<ul class="customer-title">
+			<li><a href="#">政府行业</a></li>
+			<li><a href="#">企业动态</a></li>
+		</ul>
+		<div class="customer-content">
+			<ul>
+				<li><a><span><img src="img/cus-img.png" /></span><i>南京市人民政府</i></a></li>
+				<li><a><span><img src="img/cus-img.png" /></span><i>南京市人民政府</i></a></li>
+				<li><a><span><img src="img/cus-img.png" /></span><i>南京市人民政府</i></a></li>
+				<li><a><span><img src="img/cus-img.png" /></span><i>南京市人民政府</i></a></li>
+				<li><a><span><img src="img/cus-img.png" /></span><i>南京市人民政府</i></a></li>
+				<li><a><span><img src="img/cus-img.png" /></span><i>南京市人民政府</i></a></li>
+			</ul>
+			<ul>
+				<li><a><span><img src="img/cus-img.png" /></span><i>南京市人民政府</i></a></li>
+				<li><a><span><img src="img/cus-img.png" /></span><i>南京市人民政府</i></a></li>
+				<li><a><span><img src="img/cus-img.png" /></span><i>南京市人民政府</i></a></li>
+				<li><a><span><img src="img/cus-img.png" /></span><i>南京市人民政府</i></a></li>
+				<li><a><span><img src="img/cus-img.png" /></span><i>南京市人民政府</i></a></li>
+				<li><a><span><img src="img/cus-img.png" /></span><i>南京市人民政府</i></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="contact">
+		<p>我们的联系方式</p>
+		<p class="contact-title">我们期待您的来信，并真诚邀请您的加入，有你的加入我们才更完美</p>
+		<div class="map">
+			<a><img src="img/map-img.png" /></a>
+		</div>
+		<div class="contact-tab">
+			<div class="input-list">
+				<input type="text" placeholder="姓名：" /> <input type="text"
+					class="tel" placeholder="手机号码：" />
+				<textarea name="liuyan" class="liuyan" cols="500" rows="300"
+					placeholder="留言信息："></textarea>
+				<input type="submit" class="button" value="提交" />
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footer-content">
+			<ul>
+				<li><a href="#">合作伙伴</a><span
+					style="padding-left: 8px; vertical-align: middle; color: #fff;">丨</span></li>
+				<li><a href="#">常用链接</a><span
+					style="padding-left: 8px; vertical-align: middle; color: #fff;">丨</span></li>
+				<li><a href="#">人才招聘</a><span
+					style="padding-left: 8px; vertical-align: middle; color: #fff;">丨</span></li>
+				<li><a href="#">公司OA</a><span
+					style="padding-left: 8px; vertical-align: middle; color: #fff;">丨</span></li>
+				<li><a href="#">联系我们</a></li>
+			</ul>
+			<a class="copy">©2011 Microsoft Corporation</a>
+		</div>
+	</div>
+</body>
+</html>

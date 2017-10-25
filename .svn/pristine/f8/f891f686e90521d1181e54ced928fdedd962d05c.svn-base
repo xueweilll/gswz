@@ -1,0 +1,165 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<base href="<%=basePath%>">
+<%@include file="../header.jsp"%>
+<title>公司新闻</title>
+
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="This is my page">
+
+<script type="text/javascript">
+
+	$(function() {
+		$("#news_list").datagrid({
+			width : 'auto',
+			height : 'auto',
+			nowrap : false,
+			striped : true,
+			border : true,
+			collapsible : false,
+			fit : true,
+			url : 'adminNews/bind.html',
+			remoteSort : false,
+			idField : 'id',
+			singleSelect : true,
+			rownumbers : true,
+			toolbar : '#tb',
+			pagination : true,
+			pageSize : 20,
+			onLoadSuccess:function(){
+				$("#news_list").datagrid("unselectAll");
+			},
+			columns:[[
+			      {field:'title',title:'文章标题',width:200},    
+			      {field:'order',title:'排序号',width:100},    
+			      {field:'createtime',title:'创建时间',width:160},    
+			      {field:'edittime',title:'修改时间',width:160},    
+			      {field:'riqi',title:'显示日期',width:160},    
+			      {field:'isindex',title:'是否首页显示',width:100,formatter: function(value,row,index){
+			    	  if(value==1){
+			    		  return "是";
+			    	  }else{
+			    		  return "否";
+			    	  }
+			      }}   
+			]]
+		});
+		
+		var p = $("#news_list").datagrid('getPager');
+		$(p).pagination({
+			pageList : [ 5, 10, 15, 20 ],
+			beforePageText : '第',
+			afterPageText : '页        共{pages}页',
+			displayMsg : '当前显示{from}-{to}条记录      共{total}条记录'
+		});
+	});
+	
+	function add() {		
+		showDialogWH("添加机组参数信息", "adminNews/adminNewsInfo.html?id=0",400,300);
+	}
+	
+	
+
+	function edit() {
+		var row = $("#news_list").datagrid("getSelected");
+		if (row == null) {
+			$.messager.alert("操作提示", "请选择一条记录再进行操作！", "error");
+			return false;
+		}
+		showDialogWH("编辑机组参数信息", "adminNews/adminNewsInfo.html?id=" + row.id,400,300);
+	}
+
+	function distory() {
+		var row = $("#news_list").datagrid("getSelected");
+		if (row == null) {
+			$.messager.alert("操作提示", "请选择一条记录再进行操作！", "error");
+			return false;
+		}
+		$.messager.confirm("删除提示", "您确定要执行删除吗？", function(data) {
+			if (data) {
+				$.ajax({
+					type : 'POST',
+					url : "adminNews/delete.html",
+					data : {
+						id : row.id
+					},
+					success : function() {
+						$("#news_list").datagrid("unselectAll");
+						$("#news_list").datagrid("reload");
+					}
+				});
+			}
+		});
+	}
+	function selectUnitParmeter(){	
+		$("#news_list").datagrid('load',{		
+			name: $("#name").textbox("getText"),
+			pkey: $("#pkey").textbox("getText"),
+			sysid:$("#sysid").combobox("getValue")
+		});
+		$("#news_list").datagrid("unselectAll");
+	}
+	function isIndexShow(){
+		var row = $("#news_list").datagrid("getSelected");
+		if (row == null) {
+			$.messager.alert("操作提示", "请选择一条记录再进行操作！", "info");
+			return false;
+		}
+		var message;
+		var isindex;
+		if(row.isindex==0){
+			message="您确定要添加首页显示吗？";
+			isindex=1;
+		}else{
+			message="您确定要移除首页显示吗？";
+			isindex=0;
+		}
+		$.messager.confirm("操作提示", message, function(data) {
+			if (data) {
+				$.ajax({
+					type : 'POST',
+					url : "adminNews/save.html",
+					data : {
+						id : row.id,
+						isindex:isindex
+					},
+					success : function() {
+						$("#news_list").datagrid("unselectAll");
+						$("#news_list").datagrid("reload");
+					}
+				});
+			}
+		});
+		
+	}
+</script>
+
+</head>
+
+<body class="easyui-layout" id="cc">
+	<table id="news_list" cellspacing="0" cellpadding="0"></table>
+		<div id="tb" >
+			<div class="cz_div_title">
+				<a href="javascript:void(0)" class="easyui-linkbutton" onclick="add()" data-options="iconCls:'icon-add'" plain="flase">新增</a>
+				<a href="javascript:void(0)" class="easyui-linkbutton" onclick="edit()" data-options="iconCls:'icon-edit'" plain="flase">编辑</a>
+				<a href="javascript:void(0)" class="easyui-linkbutton" onclick="distory()" data-options="iconCls:'icon-remove'" plain="flase">删除</a>
+				<a href="javascript:void(0)" class="easyui-linkbutton" onclick="isIndexShow()" data-options="iconCls:'icon-edit'" plain="flase">首页显示</a>
+			</div>
+			<!-- <div class="cz_div">
+				参数名称:<input class="easyui-textbox" id="name" style="width:100px" name="name"/>
+				参数关键字:<input class="easyui-textbox" id="pkey" style="width:100px" name="pkey"/>
+				<a href="javascript:void(0)" class="easyui-linkbutton" onclick="selectUnitParmeter()" iconCls="icon-search">查询</a>
+			</div> -->
+		</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+package com.benqzl.service;
+
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.benqzl.dao.NewsMapper;
+import com.benqzl.pojo.News;
+@Service("newsService")
+public class NewsServiceImpl implements NewsService {
+	
+	@Autowired
+	private NewsMapper mapper;
+
+	@Override
+	public int deleteByPrimaryKey(Integer id) throws Exception {
+		return mapper.deleteByPrimaryKey(id);
+	}
+
+	@Override
+	public int insert(News record) throws Exception {
+		return mapper.insert(record);
+	}
+
+	@Override
+	public News selectByPrimaryKey(Integer id) throws Exception {
+		return mapper.selectByPrimaryKey(id);
+	}
+
+	@Override
+	public int updateByPrimaryKey(News record) throws Exception {
+		return mapper.updateByPrimaryKey(record);
+	}
+
+	@Override
+	public List<News> findByPage(Map<String, Object> map) throws Exception {
+		return mapper.findByPage(map);
+	}
+
+	@Override
+	public int pageCount(Map<String, Object> map) throws Exception {
+		return mapper.pageCount(map);
+	}
+
+}

@@ -1,0 +1,74 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"
+	contentType="text/html; charset=utf-8"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://"
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<base href="<%=basePath%>">
+<title>江苏明鹿物联技术股份有限公司</title>
+<!-- 合作单位 -->
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="This is my page">
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/news.css" />
+</head>
+<body>
+	<div class="container">
+		<div class="nav-brand">
+			<img src="img/logo.png" />
+		</div>
+		<div class="nav-list">
+			<ul>
+				<li><a href="index.html">公司首页</a></li>
+				<li><a href="news.html">公司新闻</a></li>
+				<li><a href="solution.html">解决方案</a></li>
+				<li><a href="product.html">产品中心</a></li>
+				<li><a href="cooperator.html">合作伙伴</a></li>
+				<li><a href="home.html">关于我们</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="news-banner">
+		<a><img src="img/news-banner.jpg" /></a>
+	</div>
+	<div class="news-center">
+		<div class="news-left">
+			<a class="news-leftimg"> <img src="img/news-left.jpg" /> 
+			<!-- <span class="gsxw">公司新闻</span> <span class="hyzx">行业资讯</span> -->
+			</a>
+		</div>
+		<div class="news-right news-rightlist">
+			<a class="news-left-title"> <span><img
+					src="img/shuxian.jpg" /> <i class="current-position">首页>合作伙伴</i> </span>
+			</a>
+			<div class="news-right-list">
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footer-content">
+			<ul>
+				<li><a href="cooperator.html">合作伙伴</a><span
+					style="padding-left:8px;  vertical-align: middle; color:.htmlfff;">丨</span></li>
+				<li><a href="linking.html">常用链接</a><span
+					style="padding-left:8px;  vertical-align: middle; color:.htmlfff;">丨</span></li>
+				<li><a href="jobs.html">人才招聘</a><span
+					style="padding-left:8px;  vertical-align: middle; color:.htmlfff;">丨</span></li>
+				<li><a href="javascript:void(0);">公司OA</a><span
+					style="padding-left:8px;  vertical-align: middle ; color:.htmlfff;">丨</span></li>
+				<li><a href="contactUs.html">联系我们</a></li>
+			</ul>
+			<p class="copy">©2016 江苏明鹿物联技术股份有限公司  Corporation</p>
+		</div>
+	</div>
+</body>
+</html>

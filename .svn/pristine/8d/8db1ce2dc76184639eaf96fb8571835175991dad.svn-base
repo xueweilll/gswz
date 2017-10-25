@@ -1,0 +1,148 @@
+@charset "utf-8";
+/* CSS Document */
+.news-banner{
+	width:1920px;
+	margin:0 auto;
+	}
+.news-center{
+	width:1200px;
+	margin:0 auto;
+	margin-top:20px;
+	}
+
+.news-center .news-leftimg{
+	width:1000px;
+	display:block;
+	width:205px;
+	position:relative;
+	}
+.news-center .news-leftimg .gsxw {
+    width: 182px;
+    position: absolute;
+    top: 150px;
+    display: inline-block;
+    left: 20px;
+    line-height: 50px;
+    border-bottom: 1px solid #ddd;
+}
+.news-center .news-leftimg .gsxw:hover{
+	cursor:pointer;
+	color:#e71f1a;
+	}
+.news-center .news-leftimg .hyzx{
+	width: 182px;
+    position: absolute;
+    top: 219px;
+    display: inline-block;
+    left: 20px;
+    line-height: 50px;
+    border-bottom: 1px solid #ddd;
+	}
+.news-center .news-leftimg .hyzx:hover{
+	cursor:pointer;
+	color:#e71f1a;
+	}
+.news-left{
+	float:left;
+	width:200px;
+	}
+.news-banner{
+	width:100%;
+	margin:0 auto;
+	}
+.news-banner img{
+	width:100%;
+	}
+/*右侧新闻*/
+.news-right {
+    width: 1000px;
+    height:auto;
+    background-color: #f9f9f9;
+    margin-left: 202px;
+	padding-bottom:20px;
+}
+.news-rightlist{
+	height:500px;
+	}
+.news-left-title {
+    display: block;
+    padding-top: 30px;
+    padding-left: 45px;
+	height: 22px;
+	width:955px;
+	border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+.current-position {
+    margin-top: -30px;
+    display: block;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 36px;
+	color:#666;
+}
+.news-right-list{
+	width:900px;
+	margin-top:20px;
+	}
+.news-right-list ul li{
+	list-style-type:none;
+	}
+.news-right-list ul li span {
+    display: block;
+    float: left;
+    line-height: 40px;
+    width: 900px;
+    border-bottom: 1px dotted #ddd;
+}
+.news-right-list span i {
+    display: inline-block;
+    width: 400px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+    padding-left: 20px;
+}
+.news-right-list span i:hover{
+	color:#f00;
+	cursor:pointer;
+	}
+/*翻页*/
+.fanye{
+	clear:both;
+	width:1200px;
+	margin:0 auto;
+	text-align:right;
+	margin-top:20px;
+	font-size:14px;
+	}
+.fanye a{
+	display:block;
+	line-height:40px;
+	}
+.fanye a span {
+    /* border: 1px solid #ddd; */
+    display: inline-block;
+    /* line-height: 30px; */
+    padding: 1px 10px 1px 10px;
+    height: 0px;
+}
+.fanye a .yeshu {
+    text-align: center;
+    /* line-height: 10px; */
+    height: 13px;
+    border: 1px solid #999;
+    width: 20px;
+    vertical-align: middle;
+    margin-left: -6px;
+    margin-right: 5px;
+    margin-top: -16px;
+    padding: 5px;
+    line-height: 13px;
+    font-size: 12px;
+}
+.fanye a .fanye-but:hover{
+	color:#f00;
+	cursor:pointer;
+	}
